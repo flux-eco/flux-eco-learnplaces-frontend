@@ -3,7 +3,7 @@ SERVER_FILE=server.mjs
 LOG_FILE=log.txt
 
 # import config file
-frontendServerPort=$(jq -r '.bindings.frontendServer.port' app/public/definitions/flux-eco-definition.json)
+frontendServerPort=$(jq -r '.bindings.frontendServer.port' public/definitions/flux-eco-definition.json)
 
 . "$HOME/.nvm/nvm.sh"
 
