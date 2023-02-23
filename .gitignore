@@ -1,12 +1,7 @@
 /*
-!app/server.mjs
-!app/src
-!app/public/app.mjs
-!app/public/config-template.mjs
-!app/public/index.html
+!app
+app/public/config.mjs
+app/public/flux-eco-ui
 !.gitignore
 !LICENSE
 !README.md
-!package.json
-!package-lock.json
-!metadata.json
