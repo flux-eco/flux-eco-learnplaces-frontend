@@ -5,3 +5,6 @@ app/public/flux-eco-ui
 !.gitignore
 !LICENSE
 !README.md
+!server.mjs
+!learnplaces-frontend-server.sh
+
