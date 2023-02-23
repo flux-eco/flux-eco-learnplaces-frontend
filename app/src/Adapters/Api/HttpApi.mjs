@@ -2,7 +2,6 @@
 
 const fs = await import('fs');
 const path = await import('path');
-
 export class HttpApi {
 
     constructor(serverConfig) {
@@ -26,7 +25,6 @@ export class HttpApi {
                 }
             });
         } else {
-
             if (request.url && request.method === 'GET' && request.url.endsWith('.woff')) {
                 const filePath = path.join(process.cwd(), 'public', request.url);
                 fs.readFile(filePath, (error, content) => {
@@ -52,8 +50,6 @@ export class HttpApi {
                     }
                 });
             }
-
-
             if (request.url.endsWith('.ttf') || request.url === "" || request.url === "/") {
                 const filePath = path.join(process.cwd(), 'public', 'index.html');
                 fs.readFile(filePath, (error, content) => {
@@ -79,5 +75,4 @@ export class HttpApi {
             }*/
         }
     }
-
 }
