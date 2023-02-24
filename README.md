@@ -2,22 +2,43 @@
 
 ## Installation
 
+**install flux-eco-components**
 ```
 ./app/bin/install-libraries.sh
-
-npm install pm2 -g
 ```
 
-**Start the server using PM2 and the provided learnplaces-frontend-server.mjs**
+**install pm 2**
+
+pm2 is an advanced process manager for Node.js applications that allows to start and monitor applications as daemons.
+
+```    
+npm install pm2 -g 
+```
+
+## Configuration
+
+Copy and rename the provideEnvironmentsTemplate.sh file to a secure space e.g. your home directory.
+
+Adjust the variables.
+
+Export the environment variables to the shell processes
 
 ```
-pm2 start learnplaces-frontend-server.mjs
+source provideEnvironments.sh
+```
+
+## Operate
+
+**Start the server using PM2 and the provided definition.json**
+
+```
+pm2 start definition.json
 ```
 
 **To stop the Node.js Manager, use the following command:**
 
 ```
-pm2 stop learnplaces-frontend-server
+pm2 stop definition.json
 ```
 
 ## pm2 state manager

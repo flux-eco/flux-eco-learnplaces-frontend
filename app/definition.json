@@ -1,0 +1,9 @@
+{
+  "name": "flux-eco-learnplaces-frontend-server",
+  "script": "flux-eco-learnplaces-frontend-server.mjs",
+  "args": [],
+  "instances": 1,
+  "autorestart": true,
+  "watch": false,
+  "max_memory_restart": "1G"
+}
