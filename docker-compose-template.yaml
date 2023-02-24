@@ -1,0 +1,5 @@
+services:
+  flux-eco-learnplaces-frontend:
+    image: fluxms/flux-eco-learnplaces-frontend:v2022-02-24-4
+    ports:
+      - (...):3100:3100

@@ -16,5 +16,5 @@ app/*
 !metadata.json
 !provideEnvironmentsTemplate.sh
 !README.md
-
+!docker-compose-template.yaml
 

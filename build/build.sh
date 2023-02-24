@@ -1,1 +1,1 @@
-docker build  --no-cache ../ -f Dockerfile -t fluxms/flux-eco-learnplaces-frontend:v2022-02-24-2
+docker build  --no-cache ../ -f Dockerfile -t fluxms/flux-eco-learnplaces-frontend:v2022-02-24-4

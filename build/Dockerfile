@@ -5,11 +5,15 @@ COPY app /build/flux-eco-learnplaces-frontend/app
 RUN chmod +x /build/flux-eco-learnplaces-frontend/app/bin/install-libraries.sh
 RUN /build/flux-eco-learnplaces-frontend/app/bin/install-libraries.sh
 
-RUN chmod +x /build/flux-eco-learnplaces-frontend/app/docker-entrypoint.sh
-
 FROM node:19-alpine AS flux-eco-learnplaces-frontend
 
 RUN npm install pm2 -g
+
+COPY --from=build /build /opt/
+
+RUN chown -R node:node /opt/flux-eco-learnplaces-frontend
+RUN chmod +x /opt/flux-eco-learnplaces-frontend/app/docker-entrypoint.sh
+
 
 USER node:node
 
@@ -23,9 +27,5 @@ ENV FLUX_ECO_LEARNPLACES_BACKEND_ENDPOINTS_HTTP_HOST=flux-eco-learnplaces-backen
 ENV FLUX_ECO_LEARNPLACES_BACKEND_ENDPOINTS_HTTP_PORT=3000
 
 
-COPY --from=build /build /opt/
-
-WORKDIR /opt/flux-eco-learnplaces-frontend/app/
+WORKDIR /opt/flux-eco-learnplaces-frontend/app
 ENTRYPOINT ["/opt/flux-eco-learnplaces-frontend/app/docker-entrypoint.sh"]
-
-
