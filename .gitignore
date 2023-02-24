@@ -7,7 +7,7 @@ app/*
 !app/public/index.html
 !app/public/main.mjs
 !app/definition.json
-!app/learnplaces-frontend-server.mjs
+!app/flux-eco-learnplaces-frontend-server.mjs
 !.gitignore
 !CHANGELOG.md
 !LICENSE
