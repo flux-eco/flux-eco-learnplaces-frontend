@@ -1,10 +1,18 @@
 /*
 !app
-app/public/config.mjs
-app/public/flux-eco-ui
+app/*
+!app/bin
+!app/public/configs
+!app/public/app.mjs
+!app/public/index.html
+!app/public/main.mjs
+!app/definition.json
+!app/learnplaces-frontend-server.mjs
 !.gitignore
+!CHANGELOG.md
 !LICENSE
+!metadata.json
+!provideEnvironmentsTemplate.sh
 !README.md
-!server.mjs
-!learnplaces-frontend-server.sh
+
 
