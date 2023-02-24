@@ -1,6 +1,7 @@
 /*
 !app
 app/*
+!app/docker-entrypoint.sh
 !app/bin
 !app/public/configs
 !app/public/app.mjs
@@ -8,6 +9,7 @@ app/*
 !app/public/main.mjs
 !app/definition.json
 !app/flux-eco-learnplaces-frontend-server.mjs
+!build
 !.gitignore
 !CHANGELOG.md
 !LICENSE
