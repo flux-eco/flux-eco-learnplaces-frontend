@@ -2,7 +2,7 @@
 
 set -e
 
-public="`dirname "$0"`/../public"
+public="`dirname "$0"`/../server/public"
 
 installLibrary() {
     (mkdir -p "$public/$1" && cd "$public/$1" && wget -O - "$2" | tar -xz --strip-components=1)
