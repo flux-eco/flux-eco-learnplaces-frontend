@@ -1,0 +1,34 @@
+{
+  "endpoints": {
+    "http": {
+      "server": {
+        "port": "${SERVER_PORT}",
+        "host": "${SERVER_HOST}"
+      },
+      "static": {
+        "name": "getStaticContent",
+        "description": "The main entry point for the frontend API.",
+        "method": "GET",
+        "path": "/static/:file",
+        "response": {
+          "description": "The content of the requested file.",
+          "type": "string"
+        }
+      }
+    }
+  },
+  "bindings": {
+    "backend": {
+      "server": {
+        "port": "${BACKEND_PORT}",
+        "host": "${BACKEND_HOST}"
+      },
+      "boundActions": [
+        {
+          "path": "/api",
+          "targetPath": "/backend/api"
+        }
+      ]
+    }
+  }
+}

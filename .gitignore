@@ -1,13 +1,9 @@
 /*
 !app
-app/*
 !app/docker-entrypoint.sh
 !app/bin
-!app/public/configs
-!app/public/app.mjs
-!app/public/index.html
-!app/public/main.mjs
-!app/definition.json
+!app/server
+!app/server/public
 !app/flux-eco-learnplaces-frontend-server.mjs
 !build
 !.gitignore
