@@ -2,7 +2,6 @@ FROM node:19-alpine AS build
 
 COPY app /build/flux-eco-learnplaces-frontend/app
 
-RUN chmod +x /build/flux-eco-learnplaces-frontend/app/bin/install-libraries.sh
 RUN /build/flux-eco-learnplaces-frontend/app/bin/install-libraries.sh
 
 FROM node:19-alpine AS flux-eco-learnplaces-frontend
