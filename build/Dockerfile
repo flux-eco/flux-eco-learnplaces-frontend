@@ -11,7 +11,7 @@ RUN npm install pm2 -g
 COPY --from=build /build /opt/
 
 RUN chown -R node:node /opt/flux-eco-learnplaces-frontend
-RUN chmod +x /opt/flux-eco-learnplaces-frontend/app/docker-entrypoint.sh
+RUN chmod /opt/flux-eco-learnplaces-frontend/app/docker-entrypoint.sh
 
 
 USER node:node
