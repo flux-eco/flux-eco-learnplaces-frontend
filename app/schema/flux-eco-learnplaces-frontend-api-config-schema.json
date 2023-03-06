@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "flux-eco-learnplaces-frontend-api-config-schema.json",
+  "allOf": [
+    {
+      "$ref": "../../../flux-eco/schemas/config-schemas/flux-eco-api-config-schema.json"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "outbounds": {
+      "type": "object",
+      "properties": {
+        "proxyRequestHandler": {
+          "$ref": "../../../flux-eco/schemas/mapping-schemas/flux-eco-api-outbounds-mapping-schema.json"
+        }
+      },
+      "required": ["proxyRequestHandler"]
+    }
+  }
+}

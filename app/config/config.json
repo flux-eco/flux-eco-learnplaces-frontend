@@ -1,34 +1,60 @@
 {
-  "endpoints": {
-    "http": {
+  "$schema": "../schema/flux-eco-learnplaces-frontend-config-schema.json",
+  "name": "flux-eco-learnplaces-frontend",
+  "inboundsConfig": {
+    "httpBindingConfig": {
       "server": {
-        "port": "${SERVER_PORT}",
-        "host": "${SERVER_HOST}"
+        "host": "${SERVER_HOST}",
+        "port": "${SERVER_PORT}"
       },
-      "static": {
-        "name": "getStaticContent",
-        "description": "The main entry point for the frontend API.",
-        "method": "GET",
-        "path": "/static/:file",
-        "response": {
-          "description": "The content of the requested file.",
-          "type": "string"
+      "staticFilesPath": "/public",
+      "policies": null,
+      "routes": {
+        "static": {
+          "/index.html": {
+            "contentType": "text/html"
+          },
+          "/main.mjs": {
+            "contentType": "application/javascript"
+          },
+          "/**/*.mjs": {
+            "contentType": "application/javascript"
+          },
+          "/**/*.ttf": {
+            "contentType": "application/font-ttf"
+          },
+          "/**/*.wof": {
+            "contentType": "application/font-woff"
+          }
+        },
+        "api": {
+          "/api/{pageName}/readPageStructure": {
+            "contentType": "application/json",
+            "parameterNames": ["pageName"],
+            "actionName": "readPageStructure",
+            "actionType": "requestHandler"
+          }
         }
       }
     }
   },
-  "bindings": {
-    "backend": {
-      "server": {
-        "port": "${BACKEND_PORT}",
-        "host": "${BACKEND_HOST}"
-      },
-      "boundActions": [
-        {
-          "path": "/api",
-          "targetPath": "/backend/api"
+  "apiConfig": {
+    "outbounds": {
+      "proxyRequestHandler": {
+        "actionName": "handleRequest",
+        "parametersMapping": {
+          "path": "path"
         }
-      ]
+      }
+    }
+  },
+  "outboundsConfigs": {
+    "proxyRequestHandler": {
+      "server": {
+        "port": "${BACKEND_SERVER_PORT}",
+        "host": "${BACKEND_SERVER_HOST}"
+      },
+      "apiBasePath": "/api"
     }
   }
 }
