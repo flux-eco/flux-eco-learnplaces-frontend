@@ -7,29 +7,30 @@
         "host": "${SERVER_HOST}",
         "port": "${SERVER_PORT}"
       },
-      "staticFilesPath": "/public",
       "policies": null,
       "routes": {
         "static": {
-          "/index.html": {
-            "contentType": "text/html"
-          },
-          "/main.mjs": {
-            "contentType": "application/javascript"
-          },
-          "/**/*.mjs": {
-            "contentType": "application/javascript"
-          },
-          "/**/*.ttf": {
-            "contentType": "application/font-ttf"
-          },
-          "/**/*.wof": {
-            "contentType": "application/font-woff"
+          "/public": {
+            "/index.html": {
+              "Content-Type": "text/html"
+            },
+            "/main.mjs": {
+              "Content-Type": "application/javascript"
+            },
+            "/**/*.mjs": {
+              "Content-Type": "application/javascript"
+            },
+            "/**/*.ttf": {
+              "Content-Type": "application/font-ttf"
+            },
+            "/**/*.wof": {
+              "Content-Type": "application/font-woff"
+            }
           }
         },
         "api": {
           "/api/{pageName}/readPageStructure": {
-            "contentType": "application/json",
+            "Content-Type": "application/json",
             "parameterNames": ["pageName"],
             "actionName": "readPageStructure",
             "actionType": "requestHandler"
