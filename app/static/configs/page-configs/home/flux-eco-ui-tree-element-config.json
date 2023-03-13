@@ -1,0 +1,12 @@
+{
+  "$schema": "./../../../flux-eco-ui-tree-element/schemas/config.json",
+  "id": "learnplaceNavigation",
+  "settings": {
+    "nodeDataSchema": {
+      "label": {
+        "type": "string"
+      }
+    }
+  },
+  "initialState": { }
+}
