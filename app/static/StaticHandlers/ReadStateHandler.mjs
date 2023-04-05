@@ -12,6 +12,6 @@ export class ReadStateHandler {
         const response = await fetch(readStateActionEndpoint);
         const result = await response.json();
         console.log(result)
-        return result;
+        return await result;
     }
 }

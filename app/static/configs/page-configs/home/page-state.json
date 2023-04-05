@@ -1,5 +1,5 @@
 {
-  "$schema": "../../../flux-eco-ui-page-element/schemas/state.json",
+  "$schema":  "./../../../flux-eco-ui-page-element/schemas/state.json",
   "pageSections": {
     "content": {
       "gridContainerId": "home/content",

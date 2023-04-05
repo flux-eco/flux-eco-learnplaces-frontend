@@ -15,3 +15,18 @@ import '../../../flux-eco/types/flux-eco-app-types.mjs';
  * @property {string} proxyRequestHandler.parametersMapping.path - The path parameter of the request that should be mapped to the 'path' parameter of the action.
  */
 
+
+/**
+ * @typedef {Object} Pages
+ * @property {PageHome} home
+ **/
+
+/**
+ * @typedef {Object} PageHome
+ * @property {PageHomeSections} pageSections
+ **/
+
+/**
+ * @typedef {Object} PageHomeSections
+ * @property {Object} content
+ **/

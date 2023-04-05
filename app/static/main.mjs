@@ -16,7 +16,11 @@ const getPage = (currentUrl) => {
 const getReadStateActionEndpoint = (page) => {
     return `./configs/page-configs/${page}/page-state.json`;
 }
-const pageState = await ReadStateHandler.new().handle(getReadStateActionEndpoint(getPage(currentUrl)))
+const handler = ReadStateHandler.new();
+const pageState = await handler.handle(getReadStateActionEndpoint(getPage(currentUrl)))
+c
+
+console.log(pageState);
 
 const pageConfig = /** @type FluxEcoUiPageElementConfig */ {
     id: getPage(currentUrl),
