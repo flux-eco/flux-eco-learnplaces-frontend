@@ -1,0 +1,14 @@
+{
+  "renderPage": {
+    "parameters": {
+      "pageId": {
+        "name": "pageId",
+        "in": "query",
+        "type": "string"
+      },
+      "pageItemIds": {
+        "type": "object"
+      }
+    }
+  }
+}

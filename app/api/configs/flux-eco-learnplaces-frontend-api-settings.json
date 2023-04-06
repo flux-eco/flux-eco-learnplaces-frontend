@@ -1,8 +1,0 @@
-{
-  "backendServer": {
-    "protocol": "http",
-    "port": 8200,
-    "host": "localhost"
-  },
-  "apiBasePath": "/api"
-}

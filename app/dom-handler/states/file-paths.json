@@ -1,0 +1,74 @@
+{
+  "/favicon.ico": {
+    "pathType": "file",
+    "contentType": "image/x-icon"
+  },
+  "/index.html": {
+    "pathType": "file",
+    "contentType": "text/html"
+  },
+  "/main.mjs": {
+    "pathType": "file",
+    "contentType": "application/javascript"
+  },
+  "/Api.mjs": {
+    "pathType": "file",
+    "contentType": "application/javascript"
+  },
+  "/states/actions.json": {
+    "pathType": "file",
+    "contentType": "application/json"
+  },
+  "/states/file-paths.json": {
+    "pathType": "file",
+    "contentType": "application/json"
+  },
+  "/flux-eco-ui-page-element/FluxEcoUiPageElement.mjs": {
+    "pathType": "file",
+    "contentType": "application/javascript"
+  },
+  "/flux-eco-ui-grid-container-element/FluxEcoUIGridContainerElement.mjs": {
+    "pathType": "file",
+    "contentType": "application/javascript"
+  },
+  "/flux-eco-ui-tree-element/FluxEcoUiTreeElement.mjs": {
+    "pathType": "file",
+    "contentType": "application/javascript"
+  },
+  "/flux-eco-ui-tree-element/assets/stylesheet.css": {
+    "pathType": "file",
+    "contentType": "text/css"
+  },
+  "/flux-eco-ui-tree-element/assets/collapsed.svg": {
+    "pathType": "file",
+    "contentType": "image/svg+xml"
+  },
+  "/flux-eco-ui-tree-element/assets/expanded.svg": {
+    "pathType": "file",
+    "contentType": "image/svg+xml"
+  },
+  "/flux-eco-ui-map-element/FluxEcoUiMapElement.mjs": {
+    "pathType": "file",
+    "contentType": "application/javascript"
+  },
+  "/flux-eco-ui-map-element/libs/leaflet/leaflet-src.esm.js": {
+    "pathType": "file",
+    "contentType":  "application/javascript"
+  },
+  "/flux-eco-ui-map-element/libs/leaflet/leaflet.css": {
+    "pathType": "file",
+    "contentType": "text/css"
+  },
+  "/flux-eco-ui-map-element/libs/leaflet/leaflet.js": {
+    "pathType": "file",
+    "contentType":  "text/javascript"
+  },
+  "/flux-eco-ui-map-element/libs/leaflet/leaflet-src.js": {
+    "pathType": "file",
+    "contentType":  "text/javascript"
+  },
+  "/flux-eco-ui-map-element/assets/stylesheet.css": {
+    "pathType": "file",
+    "contentType": "text/css"
+  }
+}

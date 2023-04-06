@@ -1,5 +1,5 @@
 {
-  "$schema":  "./../../../flux-eco-ui-page-element/schemas/state.json",
+  "$schema": "../../../dom-handler/flux-eco-ui-page-element/schemas/attributes-schema.json",
   "pageSections": {
     "content": {
       "gridContainerId": "home/content",
@@ -9,16 +9,16 @@
         "itemBackgroundColor": "#ffffff",
         "gridGapInPx": 0
       },
-      "gridContainerElementItems": {
+      "gridContainerElementAttributes": {
         "treeNavigation": {
           "uiElementDefinition": {
             "tagName": "flux-eco-ui-tree-element",
             "config": {
-              "$ref": "./flux-eco-ui-tree-element-config.json"
+
             }
           },
-          "readStateActionDefinition": {
-            "actionEndpoint": "/api/readMainNavigationState"
+          "readAttributesAction": {
+            "path": "/api/readMainNavigationAttributes"
           }
         }
       }

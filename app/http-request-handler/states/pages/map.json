@@ -1,0 +1,45 @@
+{
+  "$schema": "../../../dom-handler/flux-eco-ui-page-element/schemas/attributes-schema.json",
+  "pageSections": {
+    "content": {
+      "gridContainerId": "map/content",
+      "gridContainerElementSettings": {
+        "numberOfColumns": 1,
+        "itemPaddingInPx": 10,
+        "itemBackgroundColor": "#ffffff",
+        "gridGapInPx": 0
+      },
+      "gridContainerElementAttributes": {
+        "map": {
+          "uiElementDefinition": {
+            "tagName": "flux-eco-ui-map-element",
+            "config": {
+              "settings": {
+                "mapContainerDimensions": {
+                  "width": "800px",
+                  "height": "800px"
+                },
+                "mapElementLayers": [
+                  {
+                    "layerOptions": {
+                      "attribution": "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors"
+                    },
+                    "layerUrl": "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                  }
+                ]
+              }
+            }
+          },
+          "readAttributesAction": {
+            "path": "/api/flux-ilias-rest-api-proxy/learnplaces-frontend/readMapAttributes/mapId/{mapId}",
+            "parameters": {
+              "mapId": {
+                "type": "number"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
