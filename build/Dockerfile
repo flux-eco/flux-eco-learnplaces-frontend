@@ -1,18 +1,15 @@
 FROM node:19-alpine AS build
 
 COPY app /build/flux-eco-learnplaces-frontend/app
+RUN chmod +x /build/flux-eco-learnplaces-frontend/app/docker-entrypoint.sh
 
-RUN /build/flux-eco-learnplaces-frontend/app/bin/install-libraries.sh
+#RUN /build/flux-eco-learnplaces-frontend/app/bin/install-libraries.sh
 
 FROM node:19-alpine AS flux-eco-learnplaces-frontend
-
-RUN npm install pm2 -g
 
 COPY --from=build /build /opt/
 
 RUN chown -R node:node /opt/flux-eco-learnplaces-frontend
-RUN /opt/flux-eco-learnplaces-frontend/app/docker-entrypoint.sh
-
 
 USER node:node
 

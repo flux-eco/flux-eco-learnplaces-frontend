@@ -1,8 +1,0 @@
-{
- "actions": {
-     "$ref": "/states/actions.json"
-  },
-  "settings": {
-
-  }
-}

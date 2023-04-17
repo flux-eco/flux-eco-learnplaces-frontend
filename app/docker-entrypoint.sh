@@ -1,3 +1,2 @@
 #!/bin/sh
-
-pm2-runtime --format definitions.json
+/opt/flux-eco-learnplaces-frontend/app/app.mjs

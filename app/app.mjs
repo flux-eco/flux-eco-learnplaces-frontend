@@ -3,7 +3,7 @@ import fs from "node:fs";
 import path from "node:path";
 
 import {FluxEcoNodeHttpServer} from "./flux-eco-node-http-server/FluxEcoNodeHttpServer.mjs";
-import Api from "./http-request-handler/Api.mjs";
+import FluxEcoLearnplacesHttpRequestApi from "./http-api/FluxEcoLearnplacesHttpRequestApi.mjs";
 
 const readFile = (filePath) => {
     const absoluteFilePath = path.resolve(filePath);
@@ -85,24 +85,31 @@ const resolveEnvVariables = (object) => {
 }
 
 async function app() {
-    /**
-     * @type {FluxEcoLearnplacesFrontendConfig} config
-     */
-    const config = readFile("./config.json");
-    const settings = config.settings;
-    const server = await FluxEcoNodeHttpServer.new(
-        {
-            settings: {
-                httpRequestActions: settings.httpRequestHandlerConfig.actions,
-                domFilePaths: settings.domHandlerConfig.filePaths,
-                host: settings.httpServer.host,
-                port: settings.httpServer.port
-            }
-        },
-        Api.new(settings.httpRequestHandlerConfig)
-    )
-    // Start the server
-    server.start();
-}
 
+    /** @type FluxEcoNodeHttpServerConfig */
+    const config = {
+        host: "0.0.0.0",
+        port: "3200",
+        clientSideFilePaths:
+            readFile(
+                "./web-app/assets/json/file-paths.json"
+            ),
+        httpRequestActionsDefinition: readFile(
+            "./http-api/data/configs/definitions/http-request-actions-definition.json"
+        ),
+    }
+
+
+    const server = await FluxEcoNodeHttpServer.new(
+        config,
+        FluxEcoLearnplacesHttpRequestApi.new(
+            await(readFile("./http-api/data/configs/config.json"))
+        )
+    )
+    const nodeHttpServer = server.httpServer;
+// Start the server
+    server.start();
+
+}
 app();
+

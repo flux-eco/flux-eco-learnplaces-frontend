@@ -1,14 +1,17 @@
 {
-  "settings": {
-    "domHandlerConfig": {
-      "$ref": "/dom-handler/config.json"
-    },
-    "httpRequestHandlerConfig": {
-      "$ref": "/http-request-handler/config.json"
-    },
-    "httpServer": {
-      "port": 3100,
-      "host": "0.0.0.0"
+  "clientSide": {
+    "basePath": "client-side",
+    "filePaths": {
+      "$ref": "/client-side/data/configs/definitions/file-paths.json"
     }
-  }
+  },
+  "serverSide": {
+    "definitions": {
+      "actions": {
+        "$ref": "/server-side/data/configs/definitions/http-request-actions-definition.json"
+      }
+    }
+  },
+  "port": 3200,
+  "host": "0.0.0.0"
 }
